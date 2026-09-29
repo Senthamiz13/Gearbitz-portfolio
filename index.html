@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero" id="heroHeader">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="name" id="heroName"></h1>
+                <p class="profession" id="heroProfession"></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </nav>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <h2>Skills</h2>
+        <div class="skills-grid" id="skillsContainer"></div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section experience-section">
+        <h2>Work Experience</h2>
+        <div class="experience-grid" id="experienceContainer"></div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projectsContainer"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <h2>Let's Connect</h2>
+        <div class="contact-content">
+            <p>I'm always interested in hearing about new projects and opportunities.</p>
+            <div class="contact-links" id="contactLinksContainer"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="footerText"></p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

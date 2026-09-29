@@ -128,6 +128,40 @@ const portfolioConfig = {
         }
     ],
 
+    // Ventures & Client Builds (Gearbitz Technologies)
+    ventures: {
+        company: "Gearbitz Technologies",
+        role: "Co-founder",
+        intro: "Client design, fabrication, and embedded systems delivered through Gearbitz Technologies, where I am Co-founder.",
+        clients: [
+            {
+                client: "Dhanvantari Nano Aushadhi",
+                location: "Chennai",
+                description: [
+                    "Designed and fabricated a custom egg cleaning machine for production use",
+                    "Built a nano particle coater tailored to the company's process requirements",
+                    "Developed a ratio dispenser that mixes the company's cleaning products and water in precise proportions for any given quantity"
+                ]
+            },
+            {
+                client: "Puro Dynamiz",
+                location: "Puducherry",
+                description: [
+                    "Designed and fabricated a fully automated water softener system",
+                    "Automated the manual steps involved in a traditional softener workflow for hands-off operation"
+                ]
+            },
+            {
+                client: "Kosoft IT Solutions Pvt Ltd",
+                location: "",
+                description: [
+                    "Designed and 3D-printed custom enclosures and product parts for use with their existing products",
+                    "Fully designed and fabricated a face recognition and fingerprint-based attendance system running entirely on Raspberry Pi"
+                ]
+            }
+        ]
+    },
+
     // Featured Projects Section
     projects: [
         {

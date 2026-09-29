@@ -46,6 +46,7 @@ function renderPortfolio() {
     renderHero();
     renderSkills();
     renderExperience();
+    renderVentures();
     renderProjects();
     renderContact();
     renderFooter();
@@ -115,6 +116,52 @@ function renderExperience() {
         });
         experienceCard.appendChild(list);
         experienceContainer.appendChild(experienceCard);
+    });
+}
+
+// Render ventures & client builds section
+function renderVentures() {
+    const ventures = portfolioConfig.ventures;
+    if (!ventures || !ventures.clients) {
+        return;
+    }
+
+    const intro = document.getElementById('venturesIntro');
+    if (intro && ventures.intro) {
+        intro.textContent = ventures.intro;
+    }
+
+    const venturesContainer = document.getElementById('venturesContainer');
+    venturesContainer.innerHTML = '';
+
+    ventures.clients.forEach(item => {
+        const ventureCard = document.createElement('div');
+        ventureCard.className = 'experience-card';
+
+        const header = document.createElement('div');
+        header.className = 'experience-header';
+
+        const title = document.createElement('h3');
+        title.textContent = item.location
+            ? `${item.client} — ${item.location}`
+            : item.client;
+        header.appendChild(title);
+
+        const meta = document.createElement('span');
+        meta.className = 'experience-meta';
+        meta.textContent = `${ventures.company} · ${ventures.role}`;
+        header.appendChild(meta);
+
+        ventureCard.appendChild(header);
+
+        const list = document.createElement('ul');
+        item.description.forEach(point => {
+            const li = document.createElement('li');
+            li.textContent = point;
+            list.appendChild(li);
+        });
+        ventureCard.appendChild(list);
+        venturesContainer.appendChild(ventureCard);
     });
 }
 
